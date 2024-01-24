@@ -5,11 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>College of Computing</title>
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+    
 </head>
 <body>
+
     <a-scene>
+        <a-assets>
+            <img id="card-image-1" src="/image/1-1.png">
+            <img id="card-image-2" src="/image/1-2.png">
+            <img id="card-image-3" src="/image/1-3.png">
+            <img id="card-image-4" src="/image/1-4.png">
+            <a-mixin id="text-mixin" text="align: center; wrapCount: 15; color: black"></a-mixin>
+        </a-assets>
+    
+        <!-- Card 1 -->
+        <a-text value="computer science"
        
-        <a-sky color="FDF0D1"></a-sky>
-      </a-scene>
+        color="#fffff"></a-text>
+        <a-entity class="card" position="-2 1 -5" cursor-listener
+                  event-set__link="_event: click; _target: #link-1; _href: https://computing.kku.ac.th/index1">
+            <a-plane class="card-plane" material="src: #card-image-1" width="2" height="2"></a-plane>
+            <a-entity mixin="text-mixin" position="0 1.4 0" text="value: Computer"></a-entity>
+        </a-entity>
+        <a-link id="link-1" href="https://computing.kku.ac.th/index" target="_blank"></a-link>
+    
+        <!-- Card 2 -->
+        <a-entity class="card" position="0 1 -5" cursor-listener
+                  event-set__link="_event: click; _target: #link-2; _href: https://computing.kku.ac.th/index">
+            <a-plane class="card-plane" material="src: #card-image-2" width="2" height="2"></a-plane>
+        </a-entity>
+        <a-link id="link-2" href="https://computing.kku.ac.th/index" target="_blank"></a-link>
+    
+        <!-- Card 3 -->
+        <a-entity class="card" position="2 1 -5" cursor-listener
+                  event-set__link="_event: click; _target: #link-3; _href: https://computing.kku.ac.th/index">
+            <a-plane class="card-plane" material="src: #card-image-3" width="2" height="2"></a-plane>
+        </a-entity>
+        <a-link id="link-3" href="https://computing.kku.ac.th/index" target="_blank"></a-link>
+    
+        <!-- Card 4 -->
+        <a-entity class="card" position="4 1 -5" cursor-listener
+                  event-set__link="_event: click; _target: #link-4; _href: https://computing.kku.ac.th/index">
+            <a-plane class="card-plane" material="src: #card-image-4" width="2" height="2"></a-plane>
+        </a-entity>
+        <a-link id="link-4" href="https://computing.kku.ac.th/index" target="_blank"></a-link>
+    </a-scene>
+    
+    
+    
 </body>
 </html>

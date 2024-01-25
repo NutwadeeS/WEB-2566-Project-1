@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College of Computing</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <a-assets>
+            <!-- img -->
+            <img id="card-image-1" src="/image/cs.jpeg">
+            <img id="card-image-2" src="/image/it.jpeg">
+            <img id="card-image-3" src="/image/gis.jpeg">
+            <img id="card-image-4" src="/image/ai.jpeg">
+            <img id="card-image-5" src="/image/se.png">
+            <img id="floor" src="/image/floor.jpg">
+            <img id="circle" src="/image/circle.png" >
+        </a-assets>
+
+        <!-- Ground -->
+        <a-plane src="#circle" shader="flat" rotation="-90 0 0" scale="-10 10 10"></a-plane>
+        
+            <!-- Card 1 -->
+            <a-link id="link-1" href="https://computing.kku.ac.th/index">
+                
+                <a-entity class="card" cursor-listener
+                    event-set__link="_event: click; _target: #link-1; _href: https://computing.kku.ac.th/index1"
+                    position="2.5 0.5 0"
+                    rotation="0 0 0">
+                    <a-curvedimage src="#card-image-1"
+                    theta-length="72"
+                    theta-start="72"
+                    radius="1"
+                    height="0.5"
+                    position="-2.3 1.5 0"
+                    scale="3 3 3">
+                    </a-curvedimage>
+                    
+                </a-entity>
+                <a-entity position="2 1.05 -2.4" rotation="0 0 0">
+                    <a-text value="Hello, Curved World!" color="#333" width="2" wrap-count="20" radius=""></a-text>
+                  </a-entity>
+               
+      <a-entity id="card-container">
+            </a-link>
+
+            <!-- ... (similar structure for other cards) ... -->
+
+        </a-entity>
+    </a-scene>
+</body>
+</html>

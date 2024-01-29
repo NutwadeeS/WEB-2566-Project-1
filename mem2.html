@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>member</title>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <!-- text -->
+      
+    
+      <a-text value="643021228-3" 
+      position="0 5 0" 
+      animation="property: position; to: 0.3 2 -3.2; dur: 5000;" 
+      color="#000000" ></a-text>
+
+      <a-text value="Nutwadee Seehadech" 
+      position="0 5 0" 
+      animation="property: position; to: 0.3 1.5 -3.2; dur: 5000;" 
+      color="#000000" ></a-text>
+      
+      <!-- background -->
+      <a-sky src="image\win\bgwin.jpg"></a-sky>
+
+      <!-- image -->
+      <a-box position="0 0 0" 
+       width="1" height="1"
+       animation="property: position; to: 0 1 -5; dur: 2000; easing: linear" 
+       animation__2="property: rotation;; to: 0 360 0; dur: 5000; loop: true;" 
+       src="image\win\profilewin.jpg"
+       ></a-box>
+       <a-entity id="river" geometry="primitive: plane" material="color: blue"
+       position="-10 0 0" sound="src: url(sound/bgsound.wav); autoplay: true">
+  </a-scene>
+</body>
+</html>

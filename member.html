@@ -9,44 +9,85 @@
 
 <body>
   <a-scene>
+    <!-- <a-assets>
+      <audio id="river" src="sound\bgsound.wav" preload="auto"></audio>
+    </a-assets>
+  
+    <a-entity sound="src: #river"></a-entity> -->
+     <!-- sound -->
+     <a-entity id="river" geometry="primitive: plane" material="color: blue"
+     position="-10 0 0" sound="src: url(sound/bgsound.wav); autoplay: true"></a-entity>
+
+
+    <a-sky src="#background-video"></a-sky>
     <!-- text -->
-      <a-text value="Member" 
+    <a-text value="Member" 
       position="-3 5 0" 
       animation="property: position; to: -0.3 2.5 -3.2; dur: 5000;" 
       color="#000000" ></a-text>
       
-      <!-- background -->
-      <a-sky color="#6EBAA7"></a-sky>
+    <!-- background -->
+    <a-sky color="#6EBAA7"></a-sky>
 
-      <!-- image -->
-      <a-box position="0 0 0" 
+    <!-- image 1 -->
+    <a-box cursor="rayOrigin: mouse" class="clickable" id="mem1" position="0 0 0" 
        width="1" height="1"
        animation="property: position; to: 1 1 -5; dur: 2000; easing: linear" 
        animation__2="property: rotation;; to: 0 360 0; dur: 5000; loop: true;" 
-       src="profile.jpg"
-       ></a-box>
-      <!-- image -->
-      <a-box position="0 0 0" 
+       src="image/bam/profile.jpg"></a-box>
+    <script>
+      // Add a click event listener to the clickable entity
+      document.getElementById('mem1').addEventListener('click', function () {
+        // Navigate to another page when the image is clicked
+        window.location.href = 'mem1.html';
+      });
+    </script>
+
+    <!-- image 2 -->
+    <a-box cursor="rayOrigin: mouse" class="clickable" id="mem2" position="0 0 0" 
        width="1" height="1"
        animation="property: position; to: -1 1 -5; dur: 2000; easing: linear" 
        animation__2="property: rotation;; to: 0 360 0; dur: 5000; loop: true;" 
-       src="profile.jpg"
-       ></a-box>
+       src="image/win/profilewin.jpg"></a-box>
+    <script>
+      // Add a click event listener to the clickable entity
+      document.getElementById('mem2').addEventListener('click', function () {
+        // Navigate to another page when the image is clicked
+        window.location.href = 'mem2.html';
+      });
+    </script>
 
-       <a-box position="0 0 0" 
+    <!-- image 3 -->
+    <a-box cursor="rayOrigin: mouse" class="clickable" id="mem3" position="0 0 0" 
        width="1" height="1"
        animation="property: position; to: -3 1 -5; dur: 2000; easing: linear" 
        animation__2="property: rotation;; to: 0 360 0; dur: 5000; loop: true;" 
-       src="profile.jpg"
-       ></a-box>
+       src="image/kao/prokao.jpg"></a-box>
+    <script>
+      // Add a click event listener to the clickable entity
+      document.getElementById('mem3').addEventListener('click', function () {
+        // Navigate to another page when the image is clicked
+        window.location.href = 'mem3.html';
+      });
+    </script>
 
-       <a-box position="0 0 0" 
+    <!-- image 4 -->
+    <a-box cursor="rayOrigin: mouse" class="clickable" id="mem4" position="0 0 0" 
        width="1" height="1"
        animation="property: position; to: 3 1 -5; dur: 2000; easing: linear" 
        animation__2="property: rotation;; to: 0 360 0; dur: 5000; loop: true;" 
-       src="profile.jpg"
-       ></a-box>
+       src="image/pat/propat.jpg"></a-box>
+    <script>
+      // Add a click event listener to the clickable entity
+      document.getElementById('mem4').addEventListener('click', function () {
+        // Navigate to another page when the image is clicked
+        window.location.href = 'mem4.html';
+      });
+    </script>
+    <!-- sound -->
+    
       
-  </a-scene>
+    
+</a-scene>
 </body>
 </html>

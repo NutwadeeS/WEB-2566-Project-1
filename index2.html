@@ -75,17 +75,11 @@
                     radius="1"
                     height="0.5"
                     position="-2.3 1.5 0"
-                    scale="3 3 3">
+                    scale="3 3 3"
+                    class="clickable"
+                    sound="src: sound\cssound.mp3; on: click; volume: 0.5">
                 </a-curvedimage>
                 </a-entity>
-
-                <!-- Popup Container -->
-        <!-- <a-entity id="popup-container" style="display: none;"> -->
-            <!-- Popup Content -->
-            <!-- <a-entity id="popup-1" class="popup" position="0 2 -3">
-                <span class="close" onclick="closePopup()">&times;</span>
-                <a-text value="Additional information about Computer Science"></a-text>
-            </a-entity> -->
         </a-entity>
                 <script>
                 // Add a click event listener to the clickable entity
@@ -98,6 +92,15 @@
                 function closePopup() {
                     document.getElementById('popup-container').style.display = 'none';
                 }
+
+                document.getElementById('card-image-1').addEventListener('click', function () {
+                    var soundElement = document.querySelector('#card-image-1');
+                    if (soundElement.components.sound.isPlaying) {
+                        soundElement.components.sound.stopSound();
+                    } else {
+                        soundElement.components.sound.playSound();
+                    }
+                });
                 </script>
 
 
@@ -121,7 +124,8 @@
                     radius="1"
                     height="0.5"
                     position="-2.3 1.5 0"
-                    scale="3 3 3">
+                    scale="3 3 3"
+                    sound="src: sound\itsound.mp3; on: click; volume: 0.5">
                     </a-curvedimage>
                     
                 </a-entity>
@@ -154,7 +158,8 @@
                     radius="1"
                     height="0.5"
                     position="-2.3 1.5 0"
-                    scale="3 3 3">
+                    scale="3 3 3"
+                    sound="src: sound\gissound.mp3; on: click; volume: 0.5">
                     </a-curvedimage>
                     
                 </a-entity>
@@ -185,7 +190,8 @@
                     radius="1"
                     height="0.5"
                     position="-2.3 1.5 0"
-                    scale="3 3 3">
+                    scale="3 3 3"
+                    sound="src: sound\aisound.mp3; on: click; volume: 0.5">
                     </a-curvedimage>
                     
                 </a-entity>
@@ -218,7 +224,8 @@
                     radius="1"
                     height="0.5"
                     position="-2.3 1.5 0"
-                    scale="3 3 3">
+                    scale="3 3 3"
+                    sound="src: sound\sesound.mp3; on: click; volume: 0.5">
                     </a-curvedimage>
                     
                 </a-entity>

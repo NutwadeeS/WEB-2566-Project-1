@@ -30,40 +30,54 @@
         <!-- <a-sky src="#background-video"></a-sky> -->
         <!-- Ground -->
         <a-plane src="#circle" rotation="-90 0 0" scale="10 10 1" geometry="primitive: circle; radius: 0.5;"></a-plane>
+
             <!-- Card 1 -->
-            <!-- <a-link id="link-1" href="https://computing.kku.ac.th/index"> -->
-                
+                <!-- Card 1 -->
                 <a-entity cursor="rayOrigin: mouse" class="card" cursor-listener 
-                    event-set__link="_event: click; _target: #link-1; _href: https://computing.kku.ac.th/content/branch/36"
-                    position="2.5 0.5 0"
-                    rotation="0 0 0">
-                    <a-curvedimage class="clickable" id="image-1" src="#cs-text"
-                        theta-length="72"
-                        theta-start="72"
-                        radius="1"
-                        height="0.5"
-                        position="-2.3 3 0"
-                        scale="3 3 3">
-                    </a-curvedimage>
-                    <a-curvedimage src="#card-image-1"
-                        theta-length="72"
-                        theta-start="72"
-                        radius="1"
-                        height="0.5"
-                        position="-2.3 1.5 0"
-                        scale="3 3 3">
-                    </a-curvedimage>
+                event-set__link="_event: click; _target: #link-1; _href: https://computing.kku.ac.th/content/branch/36"
+                position="2.5 0.5 0"
+                rotation="0 0 0">
+                <a-curvedimage class="clickable" id="image-1" src="#cs-text"
+                    theta-length="72"
+                    theta-start="72"
+                    radius="1"
+                    height="0.5"
+                    position="-2.3 3 0"
+                    scale="3 3 3">
+                </a-curvedimage>
+                <a-curvedimage src="#card-image-1"
+                    theta-length="72"
+                    theta-start="72"
+                    radius="1"
+                    height="0.5"
+                    position="-2.3 1.5 0"
+                    scale="3 3 3">
+                </a-curvedimage>
                 </a-entity>
+
+                <!-- Popup Container -->
+        <a-entity id="popup-container" style="display: none;">
+            <!-- Popup Content -->
+            <!-- <a-entity id="popup-1" class="popup" position="0 2 -3">
+                <span class="close" onclick="closePopup()">&times;</span>
+                <a-text value="Additional information about Computer Science"></a-text>
+            </a-entity> -->
+        </a-entity>
                 <script>
-                    // Add a click event listener to the clickable entity
-                    document.getElementById('image-1').addEventListener('click', function () {
-                        // Navigate to another page when the image is clicked
-                        window.location.href = 'https://computing.kku.ac.th/content/branch/36';
-                    });
+                // Add a click event listener to the clickable entity
+                document.getElementById('image-1').addEventListener('click', function () {
+                    // Show the popup when the image is clicked
+                    document.getElementById('popup-container').style.display = 'block';
+                });
+
+                // Function to close the popup
+                function closePopup() {
+                    document.getElementById('popup-container').style.display = 'none';
+                }
                 </script>
 
+
                  <!-- Card 2 -->
-            <!-- <a-link id="link-2" href="https://computing.kku.ac.th/index"> -->
                 <a-entity cursor="rayOrigin: mouse" class="card" cursor-listener
                     event-set__link="_event: click; _target: #link-1; _href: https://computing.kku.ac.th/content/branch/37"
                     
@@ -94,10 +108,9 @@
                         window.location.href = 'https://computing.kku.ac.th/content/branch/37';
                     });
                 </script>
-            <!-- </a-link> -->
+           
 
              <!-- Card 3 -->
-             <!-- <a-link id="link-2" href="https://computing.kku.ac.th/index"> -->
                 <a-entity cursor="rayOrigin: mouse" class="card" cursor-listener
                     event-set__link="_event: click; _target: #link-1; _href: https://computing.kku.ac.th/content/branch/38"
                     
@@ -128,13 +141,10 @@
                         window.location.href = 'https://computing.kku.ac.th/content/branch/38';
                     });
                 </script>
-            <!-- </a-link> -->
 
              <!-- Card 4 -->
-             <!-- <a-link id="link-2" href="https://computing.kku.ac.th/index"> -->
                 <a-entity cursor="rayOrigin: mouse" class="card" cursor-listener
                     event-set__link="_event: click; _target: #link-1; _href: https://computing.kku.ac.th/content/branch/52"
-                   
                     position="2.5 0.5 0"
                     rotation="0 0 0">
                     <a-curvedimage class="clickable" id="image-4" src="#ai-text"
@@ -162,10 +172,9 @@
                         window.location.href = 'https://computing.kku.ac.th/content/branch/52';
                     });
                 </script>
-            <!-- </a-link> -->
+
 
              <!-- Card 5 -->
-             <!-- <a-link id="link-2" href="https://computing.kku.ac.th/index"> -->
                 <a-entity  cursor="rayOrigin: mouse" class="card" cursor-listener
                     event-set__link="_event: click; _target: #link-1; _href: https://computing.kku.ac.th/content/branch/65"
                     
@@ -196,7 +205,6 @@
                         window.location.href = 'https://computing.kku.ac.th/content/branch/65';
                     });
                 </script>
-
 
     </a-scene>
 </body>

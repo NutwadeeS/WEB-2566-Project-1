@@ -31,6 +31,26 @@
         <!-- Ground -->
         <a-plane src="#circle" rotation="-90 0 0" scale="10 10 1" geometry="primitive: circle; radius: 0.5;"></a-plane>
 
+        <a-text value="Back" id="back"
+      position="0 1.2 -1.8" 
+      color="#000000" ></a-text>
+
+      <!-- <a-box cursor="rayOrigin: mouse"  class="clickable" position="0 0 0" 
+       width="1" height="1"
+       animation="property: position; to: 1.2 1 -1; dur: 2000; easing: linear" 
+       animation__2="property: rotation;; to: 0 360 0; dur: 5000; loop: true;" 
+       src="#cp_img"
+       ></a-box> -->
+
+       ></a-box>
+       <script>
+        // Add a click event listener to the clickable entity
+        document.getElementById('back').addEventListener('click', function () {
+            // Navigate to another page when the image is clicked
+            window.location.href = 'firstindex.html';
+        });
+    </script>
+
             <!-- Card 1 -->
                 <!-- Card 1 -->
                 <a-entity cursor="rayOrigin: mouse" class="card" cursor-listener 
@@ -56,7 +76,7 @@
                 </a-entity>
 
                 <!-- Popup Container -->
-        <a-entity id="popup-container" style="display: none;">
+        <!-- <a-entity id="popup-container" style="display: none;"> -->
             <!-- Popup Content -->
             <!-- <a-entity id="popup-1" class="popup" position="0 2 -3">
                 <span class="close" onclick="closePopup()">&times;</span>

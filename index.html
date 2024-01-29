@@ -3,81 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College of Computing</title>
+    <title>index</title>
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
 </head>
+
 <body>
+  <a-scene>
+    <!-- sound -->
+   <a-entity id="river" geometry="primitive: plane" material="color: blue"
+   position="-10 0 0" sound="src: url(sound/bgsound.wav); autoplay: true"></a-entity>
+    <a-assets>
+      <!-- img -->
+      <img id="member_img" src="/image/member.png">
+      <img id="cp_img" src="/image/cp-cs.png">
+      <video id="background-video" autoplay loop crossorigin="anonymous" playsinline webkit-playsinline>
+        <source src="image\anibg.mp4" type="video/mp4">
+    </video>
+  </a-assets>
+   
+  <a-sky src="#background-video"></a-sky>
+      <!-- <a-sky color="#6EBAA7"></a-sky> -->
+      <a-text value="WELCOME TO MY PAGE" 
+      position="0 5 0" 
+      animation="property: position; to: -1.5 2.5 -3.2; dur: 5000;"
+      color="#000000" ></a-text>
 
-    <a-scene>
-        <a-assets>
-            <!-- img -->
-            <img id="card-image-1" src="/image/cs.jpeg">
-            <img id="card-image-2" src="/image/it.jpeg">
-            <img id="card-image-3" src="/image/gis.jpeg">
-            <img id="card-image-4" src="/image/ai.jpeg">
-            <img id="card-image-5" src="/image/se.png">
-
-            <!-- text -->
-            <a-mixin id="text-mixin" text="align: center; wrapCount: 15; color: black"></a-mixin>
-        </a-assets>
-    
-        <a-entity id="card-container">
-            <!-- Card 1 -->
-            <a-entity class="card" cursor-listener
-                    event-set__link="_event: click; _target: #link-1; _href: https://computing.kku.ac.th/index1"
-                    mixin="text-mixin"
-                    position="2 0 0"
-                    rotation="0 0 0">
-                <a-plane class="card-plane" material="src: #card-image-1" width="2" height="2"></a-plane>
-                <a-entity position="0 1.4 0" text="value:Computer Science"></a-entity>
-            </a-entity>
-            <a-link id="link-1" href="https://computing.kku.ac.th/index" target="_blank"></a-link>
-
-            <!-- Card 2 -->
-            <a-entity class="card" cursor-listener
-                    event-set__link="_event: click; _target: #link-2; _href: https://computing.kku.ac.th/index"
-                    mixin="text-mixin"
-                    position="1.414 1.414 0"
-                    rotation="0 45 0">
-                <a-plane class="card-plane" material="src: #card-image-2" width="2" height="2"></a-plane>
-                <a-entity position="0 1.4 0" text="value:In"></a-entity>
-            </a-entity>
-            <a-link id="link-2" href="https://computing.kku.ac.th/index" target="_blank"></a-link>
-
-            <!-- Card 3 -->
-            <a-entity class="card" cursor-listener
-                    event-set__link="_event: click; _target: #link-3; _href: https://computing.kku.ac.th/index"
-                    mixin="text-mixin"
-                    position="0 2 0"
-                    rotation="0 90 0">
-                <a-plane class="card-plane" material="src: #card-image-3" width="2" height="2"></a-plane>
-                <a-entity position="0 1.4 0" text="value:Computer Science"></a-entity>
-            </a-entity>
-            <a-link id="link-3" href="https://computing.kku.ac.th/index" target="_blank"></a-link>
-
-            <!-- Card 4 -->
-            <a-entity class="card" cursor-listener
-                    event-set__link="_event: click; _target: #link-4; _href: https://computing.kku.ac.th/index"
-                    mixin="text-mixin"
-                    position="-1.414 1.414 0"
-                    rotation="0 135 0">
-
-                <a-plane class="card-plane" material="src: #card-image-4" width="2" height="2"></a-plane>
-                <a-entity position="0 1.4 0" text="value:Computer Science"></a-entity>
-            </a-entity>
-            <a-link id="link-4" href="https://computing.kku.ac.th/index" target="_blank"></a-link>
-
-            <!-- Card 5 -->
-            <a-entity class="card" cursor-listener
-                    event-set__link="_event: click; _target: #link-5; _href: https://computing.kku.ac.th/index"
-                    mixin="text-mixin"
-                    position="-2 0 0"
-                    rotation="0 180 0">
-                <a-plane class="card-plane" material="src: #card-image-5" width="2" height="2"></a-plane>
-                <a-entity position="0 1.4 0" text="value:Computer Science"></a-entity>
-            </a-entity>
-            <a-link id="link-5" href="https://computing.kku.ac.th/index" target="_blank"></a-link>
-        </a-entity>
-    </a-scene>
+      <!-- image -->
+      <a-box cursor="rayOrigin: mouse" id="cp" class="clickable" position="0 0 0" 
+       width="2" height="2"
+       animation="property: position; to: -2 1 -5; dur: 2000; easing: linear" 
+       animation__2="property: rotation;; to: 0 360 0; dur: 5000; loop: true;" 
+       src="#cp_img"
+       ></a-box>
+       <script>
+        // Add a click event listener to the clickable entity
+        document.getElementById('cp').addEventListener('click', function () {
+            // Navigate to another page when the image is clicked
+            window.location.href = 'index2.html';
+        });
+        </script>
+       
+       <a-box cursor="rayOrigin: mouse" id="member" class="clickable" position="0 0 0" 
+       width="2" height="2"
+       animation="property: position; to: 2 1 -5; dur: 2000; easing: linear" 
+       animation__2="property: rotation;; to: 0 360 0; dur: 5000; loop: true;" 
+       src="#member_img"
+       ></a-box>
+       <script>
+        // Add a click event listener to the clickable entity
+        document.getElementById('member').addEventListener('click', function () {
+            // Navigate to another page when the image is clicked
+            window.location.href = 'member.html';
+        });
+    </script>
+  </a-scene>
 </body>
 </html>

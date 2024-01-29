@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>work2</title>
+    <title>Member</title>
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
 </head>
 
 <body>
   <a-scene>
+    <a-assets>
+      <video id="background-video" autoplay loop crossorigin="anonymous" playsinline webkit-playsinline>
+        <source src="image\anibg.mp4" type="video/mp4">
+    </video>
+    </a-assets>
+    
     <!-- <a-assets>
       <audio id="river" src="sound\bgsound.wav" preload="auto"></audio>
     </a-assets>
@@ -24,10 +30,10 @@
     <a-text value="Member" 
       position="-3 5 0" 
       animation="property: position; to: -0.3 2.5 -3.2; dur: 5000;" 
-      color="#000000" ></a-text>
+      color="#fff" ></a-text>
       
     <!-- background -->
-    <a-sky color="#6EBAA7"></a-sky>
+    <!-- <a-sky color="#6EBAA7"></a-sky> -->
 
     <!-- image 1 -->
     <a-box cursor="rayOrigin: mouse" class="clickable" id="mem1" position="0 0 0" 

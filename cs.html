@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <!-- <img id="room" src="image\bam\bg2.jpg"> -->
+        <img id="card-image-1" src="/image/cs.jpeg">
+        
+
+      </a-assets>
+      
+      <a-text value=" Computer Science is a course that focuses on learning the science of computer science. Students can apply their knowledge to solve related problems using computer science methods. Able to analyze computer needs problems Able to design and develop algorithms that increase efficiency and make computers smarter. Able to apply and develop systems that can be used to solve actual problems. and can evaluate the efficiency of the system according to academic principles" 
+      position="-5 1 -2"
+      color="#000000" > </a-text>
+      <a-text value="Computer Science" color="#000000" position="-5 1 -2" animation="property: position; to: -0.7 2 -2; dur: 8000; easing: linear; loop: false"></a-text>
+
+      <!-- <a-sky color="#ECFFFF" src="#card-image-1" radius="40"></a-sky> -->
+      <a-camera>
+        <!-- <a-cursor></a-cursor> -->
+      </a-camera>
+
+      <!-- <a-entity position="-5 1 -5">
+        <a-entity
+          gltf-model="url(path/to/fish.gltf)" 
+          scale="0.1 0.1 0.1" 
+        >
+          <a-animation attribute="position" to="5 1 -5" dur="5000" easing="linear" repeat="indefinite"></a-animation>
+          <a-animation attribute="rotation" to="0 180 0" dur="2000" easing="linear" repeat="indefinite"></a-animation>
+        </a-entity>
+      </a-entity> -->
+      <a-box position="0 0 0" 
+         depth="2"
+         width="2" height="2"
+         animation="property: position; to: 0 1 -5; dur: 2000; easing: linear" 
+         animation__2="property: rotation;; to: 0 360 0; dur: 5000; loop: true;" 
+         src="#card-image-1"
+         ></a-box>
+         <!-- <a-box position="-10 0.75 -10" color="#FFC65D"
+            animation="property: position; to: 2 1 1; dur: 10000; easing: linear; loop: true;"
+            animation__2="property: rotation; to: 0 90 90; dur: 500; loop: true;" 
+         ></a-box>    -->
+         <a-entity id="river" geometry="primitive: plane" material="color: blue"
+         position="-10 0 0" sound="src: url(sound/bgsound.wav); autoplay: true">
+    </a-scene>
+
+  </body>
+</html>

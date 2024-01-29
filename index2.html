@@ -8,6 +8,10 @@
 </head>
 <body>
     <a-scene>
+        <!-- sound -->
+        <a-entity id="river" geometry="primitive: plane" material="color: blue"
+        position="-10 0 0" sound="src: url(sound/bgsound.wav); autoplay: true"></a-entity>
+        
         <a-assets>
             <!-- img -->
             <img id="card-image-1" src="/image/cs.jpeg">
@@ -27,13 +31,13 @@
                 <source src="image\anibg.mp4" type="video/mp4">
             </video>
         </a-assets>
-        <!-- <a-sky src="#background-video"></a-sky> -->
+        <a-sky src="#background-video"></a-sky>
         <!-- Ground -->
         <a-plane src="#circle" rotation="-90 0 0" scale="10 10 1" geometry="primitive: circle; radius: 0.5;"></a-plane>
 
         <a-text value="Back" id="back"
       position="0 1.2 -1.8" 
-      color="#000000" ></a-text>
+      color="#fff" ></a-text>
 
       <!-- <a-box cursor="rayOrigin: mouse"  class="clickable" position="0 0 0" 
        width="1" height="1"
@@ -47,7 +51,7 @@
         // Add a click event listener to the clickable entity
         document.getElementById('back').addEventListener('click', function () {
             // Navigate to another page when the image is clicked
-            window.location.href = 'firstindex.html';
+            window.location.href = 'index.html';
         });
     </script>
 
